@@ -15,7 +15,7 @@ modelo += camas_utilizadas*5141 + camas_liberadas*3763
 modelo += camas_liberadas*3763 + camas_utilizadas*5141 <= presupuesto  #El gasto en camas debe ser menor al presupuesto
 modelo += camas_liberadas + camas_utilizadas == 1308 #El número de camas == 1308
 modelo += medicos_libres + medicos_trabajando == 978 #El número de médicos trabajando es de 978
-modelo += (camas_utilizadas/3) <= medicos_trabajando #Necesitamos un médico para cada 3 camas
+modelo += (pacientes/3) <= medicos_trabajando #Necesitamos un médico para cada 3 camas
 
 modelo.solve()
 
