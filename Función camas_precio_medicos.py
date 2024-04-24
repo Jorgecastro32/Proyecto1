@@ -6,7 +6,8 @@ camas_liberadas=LpVariable("Camas libres", lowBound=0, cat="Integer")
 medicos_trabajando= LpVariable("Médicos trabajando", lowBound=0, cat="Integer")
 medicos_libres=LpVariable("Médicos libres", lowBound=0, cat="Integer")
 
-presupuesto=6152634  #Presupuesto del hospital de urgencias ZENDAL. Habría que encontrar el presupuesto del hospital La Paz
+presupuesto=6152634 #Presupuesto del hospital de urgencias ZENDAL. Habría que encontrar el presupuesto del hospital La Paz
+pacientes = 500
 
 #Función a optimizar. Se desembolsan 5141€ por cada cama en uso y 3763€ por cada cama libre
 modelo += camas_utilizadas*5141 + camas_liberadas*3763
